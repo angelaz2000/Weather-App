@@ -3,27 +3,40 @@
   <head>
     <title>Weather App</title>
     <meta charset = "utf-8"/>
+    <style>
+      .place{display:inline-block}
+    </style>
+
   </head>
 
 <body>
   <script src ="sugar.min.js">
   </script>
   <div id = date>16/11/5</div>
-  <div> New York </div>
-  <img src="http://weknowyourdreams.com/images/sun/sun-03.jpg"
-    width = 100
-    length = 100>
-    <div id = day1>30°</div>
-  <div> Los Angeles </div>
-  <img src="http://www.pd4pic.com/images/-cloud-blue-symbol-cartoon-symbols-clouds-day.png"
-    width = 100
-    length = 100>
-  <div id = day2> 58° </div>
-  <div> Cincinnati </div>
-  <img src="http://www.clipartkid.com/images/30/weather-symbols-clip-art-at-clker-com-vector-clip-art-online-z80WzV-clipart.png"
-    width = 100
-    length = 100>
-  <div id = day3> 42°</div>
+
+  <div class="place">
+    <div> New York </div>
+    <img src="http://weknowyourdreams.com/images/sun/sun-03.jpg"
+      width = 100
+      length = 100>
+      <div id = day1>30°</div>
+  </div>
+
+  <div class="place">
+    <div> Los Angeles </div>
+    <img src="http://www.pd4pic.com/images/-cloud-blue-symbol-cartoon-symbols-clouds-day.png"
+      width = 150
+      length = 150>
+    <div id = day2> 58° </div>
+  </div>
+
+  <div class="place">
+    <div> Cincinnati </div>
+    <img src="http://www.clipartkid.com/images/30/weather-symbols-clip-art-at-clker-com-vector-clip-art-online-z80WzV-clipart.png"
+      width = 100
+      length = 100>
+    <div id = day3> 42°</div>
+  </div>
 
   <h1 id = "message"> waiting for button </h1>
   <button id = "hi_everyone"> Hi Everyone </button>
