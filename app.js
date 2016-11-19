@@ -1,104 +1,43 @@
-Sugar.extend()
-var location1 = {location:"New York", temperature: "30°"}
-  location2 = {location:"Los Angeles", temperature: "58°"}
-  location3 = {location:"Cincinnati", temperature: "42°"}
+// var request = new XMLHttpRequest()
+// request.open("GET", "http://api.wunderground.com/api/4c0222348c7b3182/conditions/q/NY/NewYork.json")
+// request.send()
+// request.addEventListener("load", function(){
+//   var response = JSON.parse(request.responseText)
+// console.log(response.current_observation.temp_f)
+// })
+
+// var temperature = class{temperature(){return.this.temp_f}
+//   }
+
 var location1_display = document.getElementById("location1")
-var degrees = Math.random() * 80 + 20
-location1_display.textContent = location1.temperature
-
-
-var location2_display = document.getElementById("location2")
-var degrees = Math.random() * 80 + 20
-location2_display.textContent = location2.temperature
-
-
-var location3_display = document.getElementById("location3")
-var degrees = Math.random() * 80 + 20
-location3_display.textContent = location3.temperature
-
-var now = new Date
-date.textContent = now.format ('{year}/{MM}/{dd} {Weekday}')
-
-var button = document.getElementById ("hi_everyone")
-var message = document.getElementById ("message")
-message.textContent = ("Program Started!")
-var hi_everyone = function(){
-  message.textContent = "Hiiii Everyyyonnee!!!"
-}
-button.addEventListener("click", function(){
-  alert("Hi Everyone!")
+var request1 = new XMLHttpRequest()
+request1.open("GET", "http://api.wunderground.com/api/4c0222348c7b3182/conditions/q/NY/New_York.json")
+request1.send()
+request1.addEventListener("load", function(){
+  var response = JSON.parse(request1.responseText)
+  location1_display.textContent = response.current_observation.temp_f
+  var location1_icon1 = document.getElementById("icon1")
+  location1_icon1.setAttribute("src", response.current_observation.icon_url)
 })
 
+var location2_display = document.getElementById("location2")
+var request2 = new XMLHttpRequest()
+request2.open("GET", "http://api.wunderground.com/api/4c0222348c7b3182/conditions/q/CA/Los_Angeles.json")
+request2.send()
+request2.addEventListener("load", function(){
+  var response = JSON.parse(request2.responseText)
+  location2_display.textContent = response.current_observation.temp_f
+  var location2_icon2 = document.getElementById("icon2")
+  location2_icon2.setAttribute("src", response.current_observation.icon_url)
+})
 
-
-var Person = class{
-  full_name(){
-    return this.first_name + " " + this.last_name
-  }
-
-  years(){
-    if (this.age > 21) {return (65 - this.age) + " years till retirement"}
-    else {return (21 - this.age) + " years till drinking age"}
-  }
-  // marriage() {
-  //   if (this.relation = married) {return (if this.gender = female) {{return (This female)} else (This male)} + " is married to " + this.married_to}
-  // }
-  //   else (return ((if this.gender = female) {{return (This female)} else (This male)} + " has a crush on " + this.crush_name)
-  // }
-
-  nameplate(){
-    return this.full_name() + "(" + this.job_title + ")" + "-" + this.years() //+ this.marriage()
-  }
-}
-
-var MrIliev = new Person()
-
-MrIliev.first_name = "Milan"
-MrIliev.last_name = "Iliev"
-MrIliev.job_title = "Developer/Teacher"
-MrIliev.age = 30
-MrIliev.relation = "not married"
-MrIliev.gender = "male"
-MrIliev.crush_name = "Emily"
-
-
-var Angela = new Person()
-
-Angela.first_name = "Angela"
-Angela.last_name = "Zheng"
-Angela.job_title = "student"
-Angela.age = 15
-Angela.relation = "not married"
-Angela.gender = "female"
-Angela.crush_name = "nobody"
-
-var Wendy = new Person()
-
-Wendy.first_name = "Wendy"
-Wendy.last_name = "Zheng"
-Wendy.job_title = "Babysitter"
-Wendy.age = 45
-Wendy.relation = "married"
-Wendy.gender = "female"
-Wendy.crush_name = "Junjie Wang"
-
-var Vicki = new Person()
-
-Vicki.first_name = "Vicki"
-Vicki.last_name = "Li"
-Vicki.job_title = "Student"
-Vicki.age = 15
-Vicki.relation = "not married"
-Vicki.gender = "female"
-Vicki.crush_name = 'Coby'
-
-alert(MrIliev.nameplate() + "\n" + Angela.nameplate() + "\n" + Wendy.nameplate() + "\n" )//Henry.nameplate())
-
-
-
-var show = function(n) {alert(n)}
-var list = [1, 3, 4, 10]
-list.forEach(show)
-alert(list.map(function(n){
-  return n-2.
-}))
+var location3_display = document.getElementById("location3")
+var request3 = new XMLHttpRequest()
+request3.open("GET", "http://api.wunderground.com/api/4c0222348c7b3182/conditions/q/Oh/Cincinnati.json")
+request3.send()
+request3.addEventListener("load", function(){
+  var response = JSON.parse(request3.responseText)
+  location3_display.textContent = response.current_observation.temp_f
+  var location3_icon3 = document.getElementById("icon3")
+  location3_icon3.setAttribute("src", response.current_observation.icon_url)
+})
