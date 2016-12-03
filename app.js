@@ -5,7 +5,7 @@
 //   var response = JSON.parse(request.responseText)
 // console.log(response.current_observation.temp_f)
 // })
-
+//
 // var temperature = class{temperature(){return.this.temp_f}
 //   }
 
